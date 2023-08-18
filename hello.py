@@ -4,8 +4,10 @@ import atexit
 import os
 import json
 
+# Initialize the Flask app and set the static URL path
 app = Flask(__name__, static_url_path='')
 
+# Specify the name of the database
 db_name = 'mydb'
 client = None
 db = None

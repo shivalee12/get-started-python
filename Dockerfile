@@ -1,7 +1,9 @@
 FROM python:2-alpine
 
+# Copy the requirements.txt file from the host into the container
 COPY ./requirements.txt /app/requirements.txt
 
+# Set the working directory within the container
 WORKDIR /app
 
 RUN apk --update add python py-pip openssl ca-certificates py-openssl wget bash linux-headers
